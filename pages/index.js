@@ -1,15 +1,23 @@
+import { Component } from 'React'
 import Head from 'next/head'
+import DefaultLayout from './../layouts/default'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+export default class Home extends Component {
+  constructor(props){
+    super(props)
+  }
 
-      <main className={styles.main}>
+  state = {}
+
+  render() {
+    return (
+      <DefaultLayout className={styles.container}>
+        <Head>
+          <title>Create Next App</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
@@ -48,18 +56,7 @@ export default function Home() {
             </p>
           </a>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+      </DefaultLayout>
+    )
+  }
 }
