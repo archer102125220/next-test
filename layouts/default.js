@@ -10,7 +10,6 @@ export default class Home extends Component {
   state = {}
 
   render() {
-    console.log(456);
     const { children } = this.props;
     return (
       <div className={styles.container}>

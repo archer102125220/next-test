@@ -1,10 +1,11 @@
 import { Component } from 'React'
 import Head from 'next/head'
-import DefaultLayout from './../layouts/default'
 import styles from '../styles/Home.module.css'
+import DefaultLayout from '../layouts/Default'
+import Ripples from '../components/Ripples'
 
 export default class Home extends Component {
-  constructor(props){
+  constructor(props) {
     super(props)
   }
 
@@ -56,6 +57,7 @@ export default class Home extends Component {
             </p>
           </a>
         </div>
+        <Ripples />
       </DefaultLayout>
     )
   }
